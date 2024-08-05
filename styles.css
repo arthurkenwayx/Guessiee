@@ -1,0 +1,261 @@
+body {
+        font-family: "Permanent Marker", cursive;
+        font-weight: 400;
+        font-style: normal;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;       
+        height: 100%;
+        overflow: hidden;
+}
+
+
+/* ANCHOR TAG  */
+a {
+    text-decoration: none;
+    color: #987D9A;
+}
+/* SIDEBAR  */
+
+/* NAVBAR */
+.btn {
+    flex: 1;
+}
+nav {
+
+}
+.navbar {
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom:
+}
+li {
+    list-style: none;
+    padding:  1.5rem;
+cursor: pointer;
+color: #987D9A;
+}
+
+li::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #BB9AB1;
+    transition: width 0.3s;
+}
+li:hover::after {
+    width: 100%;
+}
+
+
+/* SECTION  */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first {
+    height: 100vh;
+    width: 50vw;
+    border-radius: 0 500px 1000px 0;
+    background-color: #EECEB9;
+    color: white;
+    transition: all 0.5s ease-in;
+    transform: translateX(-1000px);
+}
+.first-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+    align-items: center;
+    justify-content: center;
+}
+.btn {
+    background-color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px 0px 50px 0;
+}
+.btn:hover {
+    color:white;
+    cursor: pointer;
+    background-color:#BB9AB1;
+}
+.value {
+    height: 2rem;
+    width: 5rem;
+    border: none;
+    border-radius:10px;
+}
+.value:focus {
+    background-color: whitesmoke;
+    border: 5px solid #987D9A;
+}
+
+/* -----------------------------------------------------------------------------------  */
+/* SECOND  */
+.second {
+    height: 100vh;
+    transform: translateX(2000px);
+    width: 50vw;
+    background-color: #987D9A;
+    border-radius: 500px 0 0 100px;
+    transition: all 0.5s ease-in;
+}
+.changeable {
+    border-radius: 100px;
+    height: 250px;
+    width: 250px;
+}
+.second-container h1 {
+    color: white;
+}
+.cont {
+    width: 20rem;
+
+}
+.second-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15rem;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 40px 10px 40px;
+    background-color: #FEFBD8;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.5s ease-in;
+    margin-top: 250px;
+}
+.go-top {
+    margin:0;
+}
+.icon:hover {
+    background-color: #987D9A;
+    color: white;
+}
+
+.passive-left {
+    transform: translateX(0);
+    transition: transform 0.5s ease-in;
+}
+.passive-right {
+transform: translateX(0);
+transition: transform 0.5s ease-in;
+}
+
+.marry_me {
+    background-color: transparent;
+    padding: 10px 20px 10px 20px;
+    border: 3px solid #EECEB9;
+    color: white;
+    border-radius: 50px;
+    display: block;
+    margin-left: 5rem;
+    transition: all 0.5s ease-in;
+
+}
+.marry_me:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: black;
+}
+
+
+/* Responsive styles */
+
+@media(max-height: 875px ) {
+    .second-container h1 {
+        font-size: 15px;
+    }
+    .marry_me {
+        padding: 5px 10px 5px 10px;
+    }
+    .changeable {
+        height: 200px;
+        width: 200px;
+    }
+}
+.ham {
+    display: none;
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    z-index: -100; /* Ensure the hamburger menu is above other elements */
+}
+
+
+@media(max-height: 768px) {
+    nav {
+        display: none;
+    }
+    .ham {
+        display: block;
+    }
+    .icon {
+        margin-top: 10px;
+    }
+    .second-container {
+        margin-top: 10rem;
+    }
+
+}
+
+
+/*SIDEBAR*/
+.side {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hide the sidebar off-screen */
+    width: 250px;
+    height: 100vh;
+    background-color: #987D9A;
+    transition: left 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.side li {
+    padding: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.side li:hover {
+    background-color: #BB9AB1;
+}
+
+/* Hamburger Menu */
+
+
+.line {
+    width: 30px;
+    height: 4px;
+    background-color: #987D9A;
+    margin: 6px 0;
+}
